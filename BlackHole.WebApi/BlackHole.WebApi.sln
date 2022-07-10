@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlackHole.WebApi", "BlackHole.WebApi\BlackHole.WebApi.csproj", "{B653A1C4-BF8D-41FD-B812-5D3CD7A9556E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlackHole.DAL", "BlacHole.DAL\BlackHole.DAL.csproj", "{607C6C1A-93C2-459D-B141-8E58FDF501FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackHole.Login", "BH.Login\BlackHole.Login.csproj", "{CA8C6D77-8C7D-4BCB-A6FD-741021DE6C12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B653A1C4-BF8D-41FD-B812-5D3CD7A9556E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B653A1C4-BF8D-41FD-B812-5D3CD7A9556E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B653A1C4-BF8D-41FD-B812-5D3CD7A9556E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B653A1C4-BF8D-41FD-B812-5D3CD7A9556E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{607C6C1A-93C2-459D-B141-8E58FDF501FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{607C6C1A-93C2-459D-B141-8E58FDF501FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{607C6C1A-93C2-459D-B141-8E58FDF501FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{607C6C1A-93C2-459D-B141-8E58FDF501FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA8C6D77-8C7D-4BCB-A6FD-741021DE6C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8C6D77-8C7D-4BCB-A6FD-741021DE6C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA8C6D77-8C7D-4BCB-A6FD-741021DE6C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA8C6D77-8C7D-4BCB-A6FD-741021DE6C12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75B8DD98-7FE9-4182-8BFF-84890BF2E919}
+	EndGlobalSection
+EndGlobal
