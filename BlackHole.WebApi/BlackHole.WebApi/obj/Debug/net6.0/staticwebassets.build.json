@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "sTDuUNvgqVTXGnz3ISfz3jt48G+z+dq9zb7XJA+IzsI=",
+  "Source": "BlackHole.WebApi",
+  "BasePath": "_content/BlackHole.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,14 @@
+D:\PVI\KR\my-app\BlackHole.WebApi\BlacHole.DAL\bin\Debug\net6.0\BlackHole.DAL.deps.json
+D:\PVI\KR\my-app\BlackHole.WebApi\BlacHole.DAL\bin\Debug\net6.0\BlackHole.DAL.runtimeconfig.json
+D:\PVI\KR\my-app\BlackHole.WebApi\BlacHole.DAL\bin\Debug\net6.0\BlackHole.DAL.dll
+D:\PVI\KR\my-app\BlackHole.WebApi\BlacHole.DAL\bin\Debug\net6.0\BlackHole.DAL.pdb
+D:\PVI\KR\my-app\BlackHole.WebApi\BlacHole.DAL\obj\Debug\net6.0\BlackHole.DAL.csproj.AssemblyReference.cache
+D:\PVI\KR\my-app\BlackHole.WebApi\BlacHole.DAL\obj\Debug\net6.0\BlackHole.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\PVI\KR\my-app\BlackHole.WebApi\BlacHole.DAL\obj\Debug\net6.0\BlackHole.DAL.AssemblyInfoInputs.cache
+D:\PVI\KR\my-app\BlackHole.WebApi\BlacHole.DAL\obj\Debug\net6.0\BlackHole.DAL.AssemblyInfo.cs
+D:\PVI\KR\my-app\BlackHole.WebApi\BlacHole.DAL\obj\Debug\net6.0\BlackHole.DAL.csproj.CoreCompileInputs.cache
+D:\PVI\KR\my-app\BlackHole.WebApi\BlacHole.DAL\obj\Debug\net6.0\BlackHole.DAL.dll
+D:\PVI\KR\my-app\BlackHole.WebApi\BlacHole.DAL\obj\Debug\net6.0\ref\BlackHole.DAL.dll
+D:\PVI\KR\my-app\BlackHole.WebApi\BlacHole.DAL\obj\Debug\net6.0\BlackHole.DAL.pdb
+D:\PVI\KR\my-app\BlackHole.WebApi\BlacHole.DAL\obj\Debug\net6.0\BlackHole.DAL.genruntimeconfig.cache
+D:\PVI\KR\my-app\BlackHole.WebApi\BlacHole.DAL\obj\Debug\net6.0\refint\BlackHole.DAL.dll
