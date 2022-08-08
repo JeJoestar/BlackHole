@@ -1,5 +1,7 @@
 ﻿using BlackHole.DAL;
+using BlackHole.Login;
 using BlackHole.WebApi.Dto;
+using Google.Apis.Auth;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -15,11 +17,18 @@ namespace BlackHole.WebApi.Controllers
     {
         private readonly DataRepository<User> _userRepository;
         private readonly IConfiguration _configuration;
+        private readonly ITwitterAuthService _twitterAuthService;
+        private readonly IGoogleAuthService _googleAuthService;
 
-        public UsersController(IConfiguration configuration)
+        public UsersController(
+            ITwitterAuthService twitterAuthService,
+            IGoogleAuthService googleAuthService,
+            IConfiguration configuration)
         {
             _userRepository = new DataRepository<User>(new BHDataContext());
             _configuration = configuration;
+            _twitterAuthService = twitterAuthService;
+            _googleAuthService = googleAuthService;
         }
 
         [HttpPost("sign-up")]
@@ -71,6 +80,63 @@ namespace BlackHole.WebApi.Controllers
                 token = new JwtSecurityTokenHandler().WriteToken(token),
                 expiration = token.ValidTo,
             });
+        }
+
+        [HttpPost("google")]
+        public async Task<IActionResult> GoogleSignIn(GoogleSignInDto userDto)
+        {
+            try
+            {
+                var payload = await GoogleJsonWebSignature.ValidateAsync(userDto.IdToken, new GoogleJsonWebSignature.ValidationSettings());
+                var user = await _googleAuthService.Authenticate(payload);
+
+                var authClaims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.Mail),
+                    new Claim(ClaimTypes.Role, user.Role),
+                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                };
+
+                var token = GetToken(authClaims);
+
+                return Ok(new
+                {
+                    token = new JwtSecurityTokenHandler().WriteToken(token),
+                    expiration = token.ValidTo,
+                });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("twitter")]
+        public async Task<IActionResult> TwitterSignIn([FromQuery] string oauth_token, [FromQuery] string oauth_verifier)
+        {
+            try
+            {
+                await _twitterAuthService.GetAccessToken(oauth_token, oauth_verifier);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("twitter-request")]
+        public async Task<IActionResult> TwitterRequest()
+        {
+            try
+            {
+                var requestToken = await _twitterAuthService.GetRequestToken();
+                return Ok(requestToken);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         private JwtSecurityToken GetToken(List<Claim> authClaims)

@@ -1,13 +1,16 @@
 using BlackHole.DAL;
+using BlackHole.Login;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.Configure<TwitterAuthOptions>(builder.Configuration.GetSection(nameof(TwitterAuthOptions)));
+builder.Services.Configure<GoogleAuthOptions>(builder.Configuration.GetSection(nameof(GoogleAuthOptions)));
 // Add services to the container.
 builder.Services.AddAuthorization(options =>
 {
@@ -40,6 +43,14 @@ builder.Services.AddAuthentication(options =>
     options.ClientId = "586487161634-ncg9l3kg9lq11v51ucbqaveiq8dvemjq.apps.googleusercontent.com";
     options.ClientSecret = "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";
 });
+
+builder.Services.AddSingleton<ITwitterAuthOptions>(sp => sp.GetRequiredService<IOptions<TwitterAuthOptions>>().Value);
+builder.Services.AddSingleton<IGoogleAuthOptions>(sp => sp.GetRequiredService<IOptions<GoogleAuthOptions>>().Value);
+builder.Services.AddTransient<ITwitterAuthService, TwitterAuthService>();
+builder.Services.AddTransient<IGoogleAuthService, GoogleAuthService>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IDataContext, BHDataContext>();
+builder.Services.AddHttpClient();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

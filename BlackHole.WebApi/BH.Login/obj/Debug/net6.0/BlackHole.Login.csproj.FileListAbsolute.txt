@@ -1,0 +1,15 @@
+D:\PVI\KR\my-app\BlackHole.WebApi\BH.Login\obj\Debug\net6.0\BlackHole.Login.csproj.AssemblyReference.cache
+D:\PVI\KR\my-app\BlackHole.WebApi\BH.Login\obj\Debug\net6.0\BlackHole.Login.GeneratedMSBuildEditorConfig.editorconfig
+D:\PVI\KR\my-app\BlackHole.WebApi\BH.Login\obj\Debug\net6.0\BlackHole.Login.AssemblyInfoInputs.cache
+D:\PVI\KR\my-app\BlackHole.WebApi\BH.Login\obj\Debug\net6.0\BlackHole.Login.AssemblyInfo.cs
+D:\PVI\KR\my-app\BlackHole.WebApi\BH.Login\obj\Debug\net6.0\BlackHole.Login.csproj.CoreCompileInputs.cache
+D:\PVI\KR\my-app\BlackHole.WebApi\BH.Login\bin\Debug\net6.0\BlackHole.Login.deps.json
+D:\PVI\KR\my-app\BlackHole.WebApi\BH.Login\bin\Debug\net6.0\BlackHole.Login.dll
+D:\PVI\KR\my-app\BlackHole.WebApi\BH.Login\bin\Debug\net6.0\BlackHole.Login.pdb
+D:\PVI\KR\my-app\BlackHole.WebApi\BH.Login\bin\Debug\net6.0\BlackHole.DAL.dll
+D:\PVI\KR\my-app\BlackHole.WebApi\BH.Login\bin\Debug\net6.0\BlackHole.DAL.pdb
+D:\PVI\KR\my-app\BlackHole.WebApi\BH.Login\obj\Debug\net6.0\BlackHole.Login.csproj.CopyComplete
+D:\PVI\KR\my-app\BlackHole.WebApi\BH.Login\obj\Debug\net6.0\BlackHole.Login.dll
+D:\PVI\KR\my-app\BlackHole.WebApi\BH.Login\obj\Debug\net6.0\refint\BlackHole.Login.dll
+D:\PVI\KR\my-app\BlackHole.WebApi\BH.Login\obj\Debug\net6.0\BlackHole.Login.pdb
+D:\PVI\KR\my-app\BlackHole.WebApi\BH.Login\obj\Debug\net6.0\ref\BlackHole.Login.dll
